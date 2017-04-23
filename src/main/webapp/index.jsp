@@ -11,6 +11,9 @@
     <title>$Title$</title>
   </head>
   <body>
+  code : <%=session.getAttribute("code") %>
+  <br/>
+  state: <%=session.getAttribute("state") %>
   $END$
   </body>
 </html>
