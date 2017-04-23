@@ -21,7 +21,7 @@ public class Index {
 	@RequestMapping("redirect")
 	public String test(HttpServletResponse response){
 		
-		return "redirect:123.57.238.125/session-test/login?code=123&state=456";
+		return "redirect:123.57.238.125/session-test/test/login?code=123&state=456";
 	}
 	
 	
