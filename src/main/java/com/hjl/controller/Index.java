@@ -21,7 +21,7 @@ public class Index {
 	@RequestMapping("redirect")
 	public String test(HttpServletResponse response){
 		
-		return "redirect:123.57.238.125/session-test/test/login?code=123&state=456";
+		return "redirect:http://localhost:8080/test/login?code=123678&state=456789";
 	}
 	
 	
@@ -30,7 +30,7 @@ public class Index {
 		HttpSession session = request.getSession();
 		session.setAttribute("code" ,code);
 		session.setAttribute("state" , state);
-		return "redirect:index";
+		return "redirect:/index.jsp";
 	}
 	
 	
