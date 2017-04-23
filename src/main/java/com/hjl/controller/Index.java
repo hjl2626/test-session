@@ -2,6 +2,7 @@ package com.hjl.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -19,9 +20,10 @@ public class Index {
 	
 	
 	@RequestMapping("redirect")
-	public String test(HttpServletResponse response){
-		
-		return "redirect:http://localhost:8080/test/login?code=555555&state=66666";
+	public String test(HttpServletResponse response , RedirectAttributes attr){
+		attr.addFlashAttribute("code", "999999");
+		attr.addFlashAttribute("state", "777777");
+		return "redirect:http://localhost:8080/test/login";
 	}
 	
 	
